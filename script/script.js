@@ -15,7 +15,7 @@ function exeRand() {
 	let min = +minId.value;
 	let max = +maxId.value;
 	if (typeof min !== 'number' || typeof max !== 'number' || isNaN(min) || isNaN(max) || 
-		min > 1000 || max > 1000 || min >= max) {
+		min > 1000 || max > 1000 || min >= max || min < 0) {
 		msg.innerHTML = 'Wrong imput! Try again';
 		minId.value = '';
 		maxId.value = '';
