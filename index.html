@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<!--<script src="script/script.js"></script>-->
+	<title>Randomaser</title>
+</head>
+<body>
+	<div class="content container">
+		<div class="header">try your luck!</div>
+		<div class="main">
+			<div class="main__number" id="res">000</div>
+			<div class="input">
+				<form action="#" class="input__form" method="POST" enctype="multipart/form-data">
+					<div class="input__inner">
+						<div class="input__item"><p class="input__txt">Enter a range from: </p></div>
+						<div class="input__item"><input class="input__area" placeholder="0" tabindex="1" type="text" name="min" id="min"></div>
+						<div class="input__item"><p class="input__txt"> to: </p></div>
+						<div class="input__item"><input class="input__area" placeholder="1000" tabindex="2" type="text" name="max" id="max"></div>
+					</div>
+					<button tabindex="3" type="button" id="btn" >Enter!</button>
+				</form>
+			</div>
+			<div class="messege" id="msg"></div>
+		</div>
+	</div>
+
+	<script src="script/script.js"></script>
+</body>
+</html>

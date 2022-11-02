@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul, li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/* ============================================================== */
+
+
+
+body {
+	font-family: 'Roboto', san-serif;
+	background-color:#FFF6FF;
+	color: #D5CABD;
+}
+
+.container {
+	min-height: 100%;
+	width: 1300px;
+	margin: 0 auto;
+	padding: 0 30px;
+	overflow: hidden;
+	background-color: #AB84A8;
+}
+
+.header {
+	margin: 30px auto;
+	font-size: 110px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	color: #FEFEDF;
+	color: #F9F871;
+}
+
+.main {
+	margin: 30px 0 30px 0;
+	text-align: center;
+}
+
+.main__number {
+	align-items: center;
+	margin: 0px auto;
+	padding-top: 1.5%;
+	height: 200px;
+	width: 400px;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 150px;
+	color: #50424F;
+	background-color: #FEFEDF;
+}
+
+.input {
+	margin-top: 30px;
+	font-size: 35px;
+	color: #F9F871;
+	text-align: center;
+
+}
+
+.input__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input__inner {
+	margin: 15px 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.input__item {
+	margin: 0 15px;
+}
+
+.input__area {
+	line-height: 1.5;
+	width: 60px;
+	border-radius: 7px;
+	background-color: #FEFEDF;
+	text-align: center;
+	font-size: 20px;
+}
+
+.input__form button {
+	margin: 20px 0px 0px 0px;
+	width: 300px;
+	height: 80px;
+	background-color: #FEFEDF;
+	border-radius: 7px;
+	font-size: 70px;
+	font-weight: 600;
+	color: #835680;
+
+	box-shadow: 10px 5px 5px #835680;
+	transition: linear .3s;
+}
+
+.input__form button:hover {
+	box-shadow: 10px 5px 5px #835680;
+	scale: 1.1;
+}
+
+.input__form button:active {
+	scale: 1;
+}
+
+.messege {
+	margin: 20px 0px 0px 0px;
+	height: 30px;
+	font-size: 50px;
+	color: #f00;
+}
