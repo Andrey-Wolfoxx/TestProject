@@ -65,15 +65,13 @@ body {
 }
 
 .main {
-	margin: 30px 0 30px 0;
+	margin: 30px 0;
 	text-align: center;
 }
 
 .main__number {
-	align-items: center;
-	margin: 0px auto;
-	padding-top: 1.5%;
-	height: 200px;
+	line-height: 1.3;
+	margin: 0 auto;
 	width: 400px;
 	border-radius: 5px;
 	font-weight: 600;
@@ -94,6 +92,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.input__block {
+	display: flex;
 }
 
 .input__inner {
@@ -117,6 +119,7 @@ body {
 }
 
 .input__form button {
+	display: block;
 	margin: 20px 0px 0px 0px;
 	width: 300px;
 	height: 80px;
@@ -140,10 +143,46 @@ body {
 }
 
 .messege {
+	display: block;
 	margin: 20px 0px 0px 0px;
-	height: 30px;
+	line-height: 1.1;
 	font-size: 50px;
 	color: #f00;
+}
+
+@media(max-width: 620px) {
+	.main {
+		margin: 15px 0;
+	}
+	.container {
+		padding: 0 15px;
+	}
+	.header {
+		margin: 15px 0;
+		font-size: 60px;
+	}
+	.main__number {
+		width: 300px;
+		line-height: 1.1;
+		font-size: 130px;
+	}
+	.input {
+		font-size: 30px;
+	}
+	.input__block {
+		flex-direction: column;
+		align-items: end;
+	}
+	.input__inner {
+		font-size: 28px;
+	}
+	.input__form button {
+		width: 250px;
+	}
+	.messege {
+		line-height: 1;
+		font-size: 30px;
+	}
 }
 
 

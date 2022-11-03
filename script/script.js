@@ -1,8 +1,10 @@
 'use strict';
 
-let btnEnt = document.getElementById('btn');
-let msg = document.getElementById('msg');
-
+let btnEnt = document.getElementById('btn'),
+	msg = document.getElementById('msg'),
+	minId = document.getElementById('min'),
+	maxId = document.getElementById('max'),
+	res = document.getElementById('res');
 
 function getRandInt(fromNun, toNum) {
 	let result = Math.round(Math.random() * (toNum - fromNun)) + fromNun;
@@ -10,30 +12,25 @@ function getRandInt(fromNun, toNum) {
 }
 
 function exeRand() {
-	let minId = document.getElementById('min');
-	let maxId = document.getElementById('max');
-	let min = +minId.value;
-	let max = +maxId.value;
-	if (typeof min !== 'number' || typeof max !== 'number' || isNaN(min) || isNaN(max) || 
-		min > 1000 || max > 1000 || min >= max || min < 0) {
-		msg.innerHTML = 'Wrong imput! Try again';
-		minId.value = '';
-		maxId.value = '';
-
-		document.getElementById('res').innerHTML = 'OwO';
-		console.log('Error!');
-		return 'Wrong imput!';
+	let min = +minId.value,
+		max = +maxId.value;
+	
+	if (min >= 0 && min < 1000 && max > 0 && max <= 1000 && min < max && Number.isInteger(min) && Number.isInteger(max)) {
+		res.innerHTML = getRandInt(min, max);
+		msg.innerHTML = '';
+		return false;
 	}
-	document.getElementById('res').innerHTML = getRandInt(min, max);
-	msg.innerHTML = '';
-	console.log('Done');
+
+	msg.innerHTML = 'Wrong imput! Try again';
+	minId.value = '';
+	maxId.value = '';
+	res.innerHTML = 'OwO';
+	return false;
 }
 
 function handleKeyPress(e) {
 	var enterButton = document.getElementById('btn');
-
 	e = e || window.event;
-
 	if (e.keyCode === 13) {
 		enterButton.click();
 		return false;
@@ -48,7 +45,3 @@ guessInputMax.onkeypress = handleKeyPress;
 btnEnt.onclick = function () {
 	exeRand();
 };
-
-
-
- 
